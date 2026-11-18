@@ -21,7 +21,7 @@ class ImageWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.network(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCNfXGFA9x-ajWVKfBaig8rjOL7FIDa1x_RbKU6eSPng17e1M4adZDwiPmevA-CyIDk1bQAtKvgsIsMCJeYkCU21S4vefgE8_ke2y0qvfv&s=10",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Formula_one.jpg/960px-Formula_one.jpg",
                 width: double.infinity,
                 height: 200,
                 fit: BoxFit.cover,
@@ -39,14 +39,14 @@ class ImageWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "AV-8B Harrier II",
+                      "SF-24",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(height: 5),
-                    Text('Rp 7890000000?'),
+                    Text('Rp 346000000000?'),
                   ],
                 ),
               ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dasar_widget/widgets/row_widget.dart';
+import 'package:dasar_widget/widgets/stack_widget.dart';
 
 class ColumnWidget extends StatelessWidget {
   const ColumnWidget({super.key});
@@ -9,6 +11,10 @@ class ColumnWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.pop(context),
+          ),
           title: const Text(
             'Belajar Column',
             style: TextStyle(color: Colors.white),
@@ -620,12 +626,12 @@ class ColumnWidget extends StatelessWidget {
                       CircleAvatar(
                         radius: 50,
                         backgroundImage: AssetImage(
-                          'assets/images/harrier.jpg',
+                          'assets/images/Self_Portrait.png',
                         ),
                       ), // CircleAvatar
                       SizedBox(height: 16),
                       Text(
-                        'Hanif',
+                        'Farel',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -641,7 +647,64 @@ class ColumnWidget extends StatelessWidget {
                     ],
                   ), // Column
                 ), // Padding
-                SizedBox(height: 50),
+                const SizedBox(height: 30),
+                const Divider(),
+                const SizedBox(height: 10),
+                const Text(
+                  'Navigasi ke Layout Widget Lainnya:',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 12),
+                Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RowWidget(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.table_rows),
+                      label: const Text('Row Widget'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFD033F5),
+                        foregroundColor: Colors.white,
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const StackWidget(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.layers),
+                      label: const Text('Stack Widget'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFD033F5),
+                        foregroundColor: Colors.white,
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(Icons.home),
+                      label: const Text('Kembali ke Menu'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueAccent,
+                        foregroundColor: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 50),
               ],
             ), // Column
           ), // Padding

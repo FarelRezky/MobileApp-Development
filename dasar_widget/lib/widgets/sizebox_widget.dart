@@ -26,7 +26,7 @@ class SizeboxWidget extends StatelessWidget {
                 SizedBox(height: 15),
 
                 Text(
-                  'Hanif',
+                  'Farel',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 5),

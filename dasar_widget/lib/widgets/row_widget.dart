@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dasar_widget/widgets/column_widget.dart';
+import 'package:dasar_widget/widgets/stack_widget.dart';
 
 class RowWidget extends StatelessWidget {
   const RowWidget({super.key});
@@ -7,6 +9,10 @@ class RowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: const Text('Belajar Row', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purpleAccent,
       ),
@@ -279,7 +285,7 @@ class RowWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hanif',
+                        'Farel',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -335,7 +341,7 @@ class RowWidget extends StatelessWidget {
               Row(
                 children: [
                   Image.network(
-                    'https://rmol.id/images/berita/normal/2023/08/199355_12494715082023_WhatsApp_Image_2023-08-14_at_18.18.50.jpeg',
+                    'https://static0.pocketlintimages.com/wordpress/wp-content/uploads/wm/2026/06/asus-rog-strix-scar-18-2026-launch-keynote.jpg?w=1600&h=900&fit=crop',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,
@@ -569,7 +575,7 @@ class RowWidget extends StatelessWidget {
                   child: Row(
                     children: [
                       Image.network(
-                        'https://rmol.id/images/berita/normal/2023/08/199355_12494715082023_WhatsApp_Image_2023-08-14_at_18.18.50.jpeg',
+                        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Formula_one.jpg/960px-Formula_one.jpg',
                         width: 120,
                         height: 120,
                         fit: BoxFit.cover,
@@ -580,7 +586,7 @@ class RowWidget extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'AIM-120 AMRAAM',
+                              'F1 CAR',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -603,6 +609,64 @@ class RowWidget extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 30),
+              const Divider(),
+              const SizedBox(height: 10),
+              const Text(
+                'Navigasi ke Layout Widget Lainnya:',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ColumnWidget(),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.view_column),
+                    label: const Text('Column Widget'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD033F5),
+                      foregroundColor: Colors.white,
+                    ),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const StackWidget(),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.layers),
+                    label: const Text('Stack Widget'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD033F5),
+                      foregroundColor: Colors.white,
+                    ),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.home),
+                    label: const Text('Kembali ke Menu'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      foregroundColor: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 60),
             ],
           ),
         ),

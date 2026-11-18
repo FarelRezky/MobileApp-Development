@@ -38,7 +38,7 @@ class CardWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Harrier',
+                            'SF-24',
                             style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class CardWidget extends StatelessWidget {
                           ),
                           const SizedBox(height: 8),
                           const Text(
-                            '8900 KG 100% Pure Gold',
+                            '768 KG 80% Carbon Fiber',
                             style: TextStyle(fontSize: 18),
                           ),
                           const SizedBox(height: 10),

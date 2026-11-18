@@ -271,7 +271,7 @@ class Tugas1Widget extends StatelessWidget {
                       ),
                       const SizedBox(height: 14),
                       const Text(
-                        'Hanif Muamar Irsyad',
+                        'Farel Rezky Aditya',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
